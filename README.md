@@ -5,7 +5,7 @@ Easily get your public IPv4 address with this program!
 ```
 easyip [-i] [-n] [-q]
   -i    Print information about the script.
-  -n    Print a line feed at the end. (Only affects Unix systems)
+  -n    Don't print a line feed at the end. (Only affects Unix systems)
   -q    Quieter, print only the IP. (Except for errors)
 ```
 
