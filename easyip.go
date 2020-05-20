@@ -10,13 +10,13 @@ import (
 
 func main() {
 	quieter := flag.Bool("q", false, "Quieter, print only the IP. (Except for errors)")
-	newline := flag.Bool("n", false, "Print a line feed at the end. (Only affects Unix systems)")
+	newline := flag.Bool("n", false, "Don't print a line feed at the end. (Only affects Unix systems)")
 	info := flag.Bool("i", false, "Print information about the script.")
 	flag.Parse()
 
 	if *info {
 		fmt.Println("########################################")
-		fmt.Println("#      EasyIP v1.0 by NinoM4ster       #")
+		fmt.Println("#      EasyIP v1.1 by NinoM4ster       #")
 		fmt.Println("# https://github.com/NinoM4ster/easyip #")
 		fmt.Println("########################################")
 		fmt.Println("\nHosts checked (in order, in case the previous one fails):")
@@ -49,7 +49,7 @@ func main() {
 		os.Exit(1)
 	}
 	fmt.Printf("%s", ip)
-	if *newline {
+	if !*newline {
 		fmt.Println()
 	}
 }
